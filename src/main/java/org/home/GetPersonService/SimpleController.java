@@ -1,4 +1,4 @@
-package org.home.SpringBootRestService;
+package org.home.GetPersonService;
 
 import org.springframework.web.bind.annotation.*;
 

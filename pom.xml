@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.home</groupId>
-	<artifactId>SpringBootRestService</artifactId>
+	<artifactId>GetPersonService</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
-	<name>SpringBootRestService</name>
-	<description>project for Spring Boot Rest-Service</description>
+	<name>GetPersonService</name>
+	<description>project for Get Person Info</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
