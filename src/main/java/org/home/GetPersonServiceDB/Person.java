@@ -1,4 +1,4 @@
-package org.home.GetPersonService;
+package org.home.GetPersonServiceDB;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package org.home.GetPersonService;
+package org.home.GetPersonServiceDB;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

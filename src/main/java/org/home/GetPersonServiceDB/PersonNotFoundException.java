@@ -1,4 +1,4 @@
-package org.home.GetPersonService;
+package org.home.GetPersonServiceDB;
 
 public class PersonNotFoundException extends RuntimeException {
     private final int personId;

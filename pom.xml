@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.home</groupId>
-	<artifactId>GetPersonService</artifactId>
+	<artifactId>GetPersonServiceDB</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
-	<name>GetPersonService</name>
+	<name>GetPersonServiceDB</name>
 	<description>project for Get Person Info</description>
 	<properties>
 		<java.version>11</java.version>
