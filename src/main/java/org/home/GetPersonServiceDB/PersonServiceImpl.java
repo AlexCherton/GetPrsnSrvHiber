@@ -1,18 +1,20 @@
 package org.home.GetPersonServiceDB;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
+@Primary
 @Service
 public class PersonServiceImpl implements PersonService {
+    private final PersonRepository personRepository;
+
+    public PersonServiceImpl(PersonRepository personRepository) {
+        this.personRepository = personRepository;
+    }
+
+    @Override
     public Person getPerson(int personId) {
-        if (personId == 123) {
-            return new Person(
-                    personId,
-                    "Иван",
-                    "Иванов"
-            );
-        } else {
-            throw new PersonNotFoundException(personId);
-        }
+        return personRepository.getPersonById(personId)
+                .orElseThrow(() -> new PersonNotFoundException(personId));
     }
 }

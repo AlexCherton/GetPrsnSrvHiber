@@ -6,11 +6,13 @@ public class Person {
     int id;
     String firstName;
     String lastNam;
+    int age;
 
-    public Person(int id, String firstName, String lastNam) {
+    public Person(int id, String firstName, String lastNam, int age) {
         this.id = id;
         this.firstName = firstName;
         this.lastNam = lastNam;
+        this.age = age;
     }
 
     public int getId() {
@@ -25,17 +27,38 @@ public class Person {
         return lastNam;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastNam(String lastNam) {
+        this.lastNam = lastNam;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Person)) return false;
         Person person = (Person) o;
-        return getId() == person.getId() && Objects.equals(getFirstName(), person.getFirstName()) && Objects.equals(getLastNam(), person.getLastNam());
+        return getId() == person.getId() && getAge() == person.getAge() && Objects.equals(getFirstName(),
+                person.getFirstName()) && Objects.equals(getLastNam(), person.getLastNam());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getFirstName(), getLastNam());
+        return Objects.hash(getId(), getFirstName(), getLastNam(), getAge());
     }
 
     @Override
@@ -44,6 +67,7 @@ public class Person {
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastNam='" + lastNam + '\'' +
+                ", age=" + age +
                 '}';
     }
 }
