@@ -15,6 +15,12 @@ public class Person {
         this.age = age;
     }
 
+    public Person(int id, String firstName, String lastNam) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastNam = lastNam;
+    }
+
     public int getId() {
         return id;
     }
