@@ -17,4 +17,9 @@ public class PersonServiceImpl implements PersonService {
         return personRepository.getPersonById(personId)
                 .orElseThrow(() -> new PersonNotFoundException(personId));
     }
+
+    @Override
+    public void createPerson(String firstName, String lastName, int age) {
+        personRepository.insertPerson(firstName, lastName,age);
+    }
 }
