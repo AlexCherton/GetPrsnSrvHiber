@@ -1,4 +1,4 @@
-package org.home.GetPersonServiceDB;
+package org.home.GetPersonServiceDBPost;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 

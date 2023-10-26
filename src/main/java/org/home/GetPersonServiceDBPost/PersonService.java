@@ -1,4 +1,4 @@
-package org.home.GetPersonServiceDB;
+package org.home.GetPersonServiceDBPost;
 
 public interface PersonService {
     Person getPerson(int personId);
