@@ -17,4 +17,8 @@ public class PersonServicePlugImpl implements PersonService {
             throw new PersonNotFoundException(personId);
         }
     }
+
+    @Override
+    public void createPerson(String firstName, String lastName, int age) {
+    }
 }

@@ -1,6 +1,7 @@
 package org.home.GetPersonServiceDBPost;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -19,7 +20,7 @@ public class PersonController {
 		return personService.getPerson(personId);
 	}
 
-	@PostMapping
+	@PostMapping(consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	@ResponseStatus(HttpStatus.CREATED)
 	public void createPerson(@Valid @RequestBody PersonRequest request){
 		personService.createPerson(request.getFirstName(),request.getLastName(),

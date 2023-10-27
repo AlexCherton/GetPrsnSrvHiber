@@ -9,7 +9,7 @@ import java.util.Optional;
 @Repository
 public class PersonRepositoryImpl implements PersonRepository {
     private static final String SQL_GET_PERSON_BY_ID =
-            "select id, first_name, last_name, age from peron where id = :id";
+            "select id, first_name, last_name, age from person where id = :id";
 
     private static final String SQL_INSERT_PERSON =
             "insert into person (first_name, last_name, age) " +
