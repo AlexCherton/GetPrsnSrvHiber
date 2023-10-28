@@ -1,4 +1,4 @@
-package org.home.GetPrsnSrvDBPstPtDelRMQ;
+package org.home.GetPrsnSrvDBPstPtDel;
 
 import org.slf4j.*;
 import org.springframework.web.bind.annotation.ControllerAdvice;

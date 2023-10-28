@@ -1,4 +1,4 @@
-package org.home.GetPrsnSrvDBPstPtDelRMQ;
+package org.home.GetPrsnSrvDBPstPtDel;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;

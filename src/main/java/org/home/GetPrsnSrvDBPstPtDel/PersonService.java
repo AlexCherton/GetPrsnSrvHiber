@@ -1,4 +1,4 @@
-package org.home.GetPrsnSrvDBPstPtDelRMQ;
+package org.home.GetPrsnSrvDBPstPtDel;
 
 public interface PersonService {
     Person getPerson(int personId);

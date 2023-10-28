@@ -1,4 +1,4 @@
-package org.home.GetPrsnSrvDBPstPtDelRMQ;
+package org.home.GetPrsnSrvDBPstPtDel;
 
 public class PersonNotFoundException extends RuntimeException {
     private final int personId;

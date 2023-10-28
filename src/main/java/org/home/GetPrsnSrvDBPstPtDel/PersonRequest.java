@@ -1,4 +1,4 @@
-package org.home.GetPrsnSrvDBPstPtDelRMQ;
+package org.home.GetPrsnSrvDBPstPtDel;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

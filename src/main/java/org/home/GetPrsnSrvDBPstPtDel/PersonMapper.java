@@ -1,4 +1,4 @@
-package org.home.GetPrsnSrvDBPstPtDelRMQ;
+package org.home.GetPrsnSrvDBPstPtDel;
 
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
