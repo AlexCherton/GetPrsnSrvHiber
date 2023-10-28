@@ -1,4 +1,4 @@
-package org.home.GetPrsnSrvDBPstAndPt;
+package org.home.GetPrsnSrvDBPstPtDel;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
@@ -27,5 +27,11 @@ public class PersonServiceImpl implements PersonService {
     public void updatePerson(String firstName, String lastName, int age, int id) {
         var person = personRepository.getPersonById(id).orElseThrow(() -> new PersonNotFoundException(id));
         personRepository.updatePerson(firstName, lastName,age, person.getId());
+    }
+
+    @Override
+    public void deletePerson(int id) {
+        var person = personRepository.getPersonById(id).orElseThrow(() -> new PersonNotFoundException(id));
+        personRepository.deletePerson(person.getId());
     }
 }

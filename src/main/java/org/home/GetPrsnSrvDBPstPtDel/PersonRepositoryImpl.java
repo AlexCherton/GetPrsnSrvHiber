@@ -1,4 +1,4 @@
-package org.home.GetPrsnSrvDBPstAndPt;
+package org.home.GetPrsnSrvDBPstPtDel;
 
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -21,6 +21,9 @@ public class PersonRepositoryImpl implements PersonRepository {
                 "last_name = :lastName " +
                 "age = :age " +
             "where id = :id";
+
+    private static final String SQL_DELETE_PERSON =
+            "delete from person where id = :id";
 
     private final PersonMapper personMapper;
     private final NamedParameterJdbcTemplate jdbcTemplate;
@@ -62,5 +65,12 @@ public class PersonRepositoryImpl implements PersonRepository {
         params.addValue("age", age);
         params.addValue("id", id);
         jdbcTemplate.update(SQL_UPDATE_PERSON,params);
+    }
+
+    @Override
+    public void deletePerson(int id) {
+        var params = new MapSqlParameterSource();
+        params.addValue("id", id);
+        jdbcTemplate.update(SQL_DELETE_PERSON,params);
     }
 }

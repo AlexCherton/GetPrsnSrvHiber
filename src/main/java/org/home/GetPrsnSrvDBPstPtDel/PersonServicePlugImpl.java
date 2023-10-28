@@ -1,4 +1,4 @@
-package org.home.GetPrsnSrvDBPstAndPt;
+package org.home.GetPrsnSrvDBPstPtDel;
 
 import org.springframework.stereotype.Service;
 
@@ -24,6 +24,11 @@ public class PersonServicePlugImpl implements PersonService {
 
     @Override
     public void updatePerson(String firstName, String lastName, int age, int id) {
+
+    }
+
+    @Override
+    public void deletePerson(int id) {
 
     }
 }

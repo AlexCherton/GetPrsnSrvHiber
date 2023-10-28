@@ -1,4 +1,4 @@
-package org.home.GetPrsnSrvDBPstAndPt;
+package org.home.GetPrsnSrvDBPstPtDel;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -32,6 +32,12 @@ public class PersonController {
 	public void updatePerson(@Valid @RequestBody PersonRequest request, @PathVariable int personId){
 		personService.updatePerson(request.getFirstName(),request.getLastName(),
 				request.getAge(), personId);
+	}
+
+	@DeleteMapping(consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public void deletePerson(@Valid @RequestBody PersonRequest request, @PathVariable int personId){
+		personService.deletePerson(personId);
 	}
 }
 

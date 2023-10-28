@@ -1,4 +1,4 @@
-package org.home.GetPrsnSrvDBPstAndPt;
+package org.home.GetPrsnSrvDBPstPtDel;
 
 import java.util.Optional;
 
@@ -8,4 +8,6 @@ public interface PersonRepository {
     void insertPerson(String firstName, String lastName, int age);
 
     void updatePerson(String firstName, String lastName, int age, int id);
+
+    void deletePerson(int id);
 }
