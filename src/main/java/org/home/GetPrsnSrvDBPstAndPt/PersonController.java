@@ -26,5 +26,12 @@ public class PersonController {
 		personService.createPerson(request.getFirstName(),request.getLastName(),
 				request.getAge());
 	}
+
+	@PutMapping(consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public void updatePerson(@Valid @RequestBody PersonRequest request, @PathVariable int personId){
+		personService.updatePerson(request.getFirstName(),request.getLastName(),
+				request.getAge(), personId);
+	}
 }
 

@@ -21,4 +21,9 @@ public class PersonServicePlugImpl implements PersonService {
     @Override
     public void createPerson(String firstName, String lastName, int age) {
     }
+
+    @Override
+    public void updatePerson(String firstName, String lastName, int age, int id) {
+
+    }
 }

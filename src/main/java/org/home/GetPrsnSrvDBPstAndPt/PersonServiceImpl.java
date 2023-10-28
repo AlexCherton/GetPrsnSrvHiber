@@ -22,4 +22,10 @@ public class PersonServiceImpl implements PersonService {
     public void createPerson(String firstName, String lastName, int age) {
         personRepository.insertPerson(firstName, lastName,age);
     }
+
+    @Override
+    public void updatePerson(String firstName, String lastName, int age, int id) {
+        var person = personRepository.getPersonById(id).orElseThrow(() -> new PersonNotFoundException(id));
+        personRepository.updatePerson(firstName, lastName,age, person.getId());
+    }
 }
