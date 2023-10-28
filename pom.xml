@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.home</groupId>
-	<artifactId>GetPrsnSrvDBPstAndPt</artifactId>
+	<artifactId>GetPrsnSrvDBPstPtDel</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
-	<name>GetPrsnSrvDBPstAndPt</name>
+	<name>GetPrsnSrvDBPstPtDel</name>
 	<description>project for Get Person Info</description>
 	<properties>
 		<java.version>11</java.version>
