@@ -1,4 +1,4 @@
-package org.home.GetPrsnSrvDBPstPtDel;
+package org.home.GetPrsnSrvDBPstPtDelRMQ;
 
 import org.springframework.stereotype.Service;
 
