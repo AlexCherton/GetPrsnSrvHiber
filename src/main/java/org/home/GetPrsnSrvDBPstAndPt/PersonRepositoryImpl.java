@@ -15,6 +15,13 @@ public class PersonRepositoryImpl implements PersonRepository {
             "insert into person (first_name, last_name, age) " +
                     "values (:firstName, :lastName, :age)";
 
+    private static final String SQL_UPDATE_PERSON =
+            "update person " +
+                "set first_name = :firstName " +
+                "last_name = :lastName " +
+                "age = :age " +
+            "where id = :id";
+
     private final PersonMapper personMapper;
     private final NamedParameterJdbcTemplate jdbcTemplate;
 
@@ -45,5 +52,15 @@ public class PersonRepositoryImpl implements PersonRepository {
         params.addValue("lastNam", lastName);
         params.addValue("age", age);
         jdbcTemplate.update(SQL_INSERT_PERSON,params);
+    }
+
+    @Override
+    public void updatePerson(String firstName, String lastName, int age, int id) {
+        var params = new MapSqlParameterSource();
+        params.addValue("firstName", firstName);
+        params.addValue("lastNam", lastName);
+        params.addValue("age", age);
+        params.addValue("id", id);
+        jdbcTemplate.update(SQL_UPDATE_PERSON,params);
     }
 }
