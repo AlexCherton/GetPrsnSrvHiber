@@ -1,4 +1,4 @@
-package org.home.GetPersonServiceDBPost;
+package org.home.GetPrsnSrvDBPstAndPt;
 
 import java.util.Optional;
 

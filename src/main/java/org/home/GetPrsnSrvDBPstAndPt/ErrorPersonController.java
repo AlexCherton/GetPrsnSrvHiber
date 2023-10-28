@@ -1,4 +1,4 @@
-package org.home.GetPersonServiceDBPost;
+package org.home.GetPrsnSrvDBPstAndPt;
 
 import org.slf4j.*;
 import org.springframework.web.bind.annotation.ControllerAdvice;

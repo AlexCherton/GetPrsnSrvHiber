@@ -1,4 +1,4 @@
-package org.home.GetPersonServiceDBPost;
+package org.home.GetPrsnSrvDBPstAndPt;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

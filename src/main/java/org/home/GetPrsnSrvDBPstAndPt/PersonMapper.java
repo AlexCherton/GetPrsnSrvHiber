@@ -1,4 +1,4 @@
-package org.home.GetPersonServiceDBPost;
+package org.home.GetPrsnSrvDBPstAndPt;
 
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;

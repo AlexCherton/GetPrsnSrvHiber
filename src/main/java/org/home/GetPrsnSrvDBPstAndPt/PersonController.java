@@ -1,4 +1,4 @@
-package org.home.GetPersonServiceDBPost;
+package org.home.GetPrsnSrvDBPstAndPt;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
