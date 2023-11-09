@@ -1,79 +1,59 @@
 package org.home.GetPrsnSrvDBPstPtDel;
 
+import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
+@Entity
+@Table(name = "person")
 public class Person {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     String firstName;
     String lastNam;
     int age;
 
-    public Person(int id, String firstName, String lastNam, int age) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastNam = lastNam;
-        this.age = age;
-    }
-
-    public Person(int id, String firstName, String lastNam) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastNam = lastNam;
-    }
+    @OneToMany(mappedBy = "language_id", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Language> languageList;
 
     public int getId() {
         return id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastNam() {
-        return lastNam;
-    }
-
-    public int getAge() {
-        return age;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getLastNam() {
+        return lastNam;
     }
 
     public void setLastNam(String lastNam) {
         this.lastNam = lastNam;
     }
 
+    public int getAge() {
+        return age;
+    }
+
     public void setAge(int age) {
         this.age = age;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Person)) return false;
-        Person person = (Person) o;
-        return getId() == person.getId() && getAge() == person.getAge() && Objects.equals(getFirstName(),
-                person.getFirstName()) && Objects.equals(getLastNam(), person.getLastNam());
+    public List<Language> getLanguageList() {
+        return languageList;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId(), getFirstName(), getLastNam(), getAge());
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastNam='" + lastNam + '\'' +
-                ", age=" + age +
-                '}';
+    public void setLanguageList(List<Language> languageList) {
+        this.languageList = languageList;
     }
 }
