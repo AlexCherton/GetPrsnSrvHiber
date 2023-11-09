@@ -1,4 +1,4 @@
-package org.home.GetPrsnSrvDBPstPtDel;
+package org.home.GetPrsnSrvHiber;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

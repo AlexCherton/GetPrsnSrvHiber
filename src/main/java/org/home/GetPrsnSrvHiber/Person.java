@@ -1,8 +1,7 @@
-package org.home.GetPrsnSrvDBPstPtDel;
+package org.home.GetPrsnSrvHiber;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Table(name = "person")
@@ -13,6 +12,7 @@ public class Person {
     String firstName;
     String lastNam;
     int age;
+    int language_id;
 
     @OneToMany(mappedBy = "language_id", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Language> languageList;
@@ -47,6 +47,14 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public int getLanguage_id() {
+        return language_id;
+    }
+
+    public void setLanguage_id(int language_id) {
+        this.language_id = language_id;
     }
 
     public List<Language> getLanguageList() {
